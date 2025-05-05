@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h3 {
+            margin-top: 30px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Expense Tracker</h2>
+        <form onsubmit="return false;">
+            <h3>Expenses</h3>
+            <label for="expense-date">Date:</label>
+            <input type="date" id="expense-date" name="expense-date" required>
+
+            <label for="expense-amount">Amount:</label>
+            <input type="number" id="expense-amount" name="expense-amount" step="0.01" placeholder="e.g., 120.50" required>
+
+            <label for="expense-name">Name:</label>
+            <input type="text" id="expense-name" name="expense-name" placeholder="e.g., Grocery shopping" required>
+
+            <label for="expense-type">Type:</label>
+            <select id="expense-type" name="expense-type" required>
+                <option value="">--Select--</option>
+                <option value="Food">Food</option>
+                <option value="Rent">Rent</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Utilities">Utilities</option>
+            </select>
+
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="">--Select--</option>
+                <option value="Cash">Cash</option>
+                <option value="Card">Card</option>
+                <option value="Online">Online</option>
+            </select>
+
+            <label for="expense-notes">Notes:</label>
+            <textarea id="expense-notes" name="expense-notes" rows="3" placeholder="Optional..."></textarea>
+
+            <h3>Credits</h3>
+            <label for="credit-date">Date:</label>
+            <input type="date" id="credit-date" name="credit-date" required>
+
+            <label for="credit-amount">Amount:</label>
+            <input type="number" id="credit-amount" name="credit-amount" step="0.01" placeholder="e.g., 500.00" required>
+
+            <label for="credit-name">Name:</label>
+            <input type="text" id="credit-name" name="credit-name" placeholder="e.g., Salary, Refund" required>
+
+            <label for="credit-type">Type:</label>
+            <select id="credit-type" name="credit-type" required>
+                <option value="">--Select--</option>
+                <option value="Salary">Salary</option>
+                <option value="Gift">Gift</option>
+                <option value="Investment">Investment</option>
+            </select>
+
+            <label for="credit-method">Received Via:</label>
+            <select id="credit-method" name="credit-method" required>
+                <option value="">--Select--</option>
+                <option value="Cash">Cash</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+                <option value="UPI">UPI</option>
+            </select>
+
+            <label for="credit-notes">Notes:</label>
+            <textarea id="credit-notes" name="credit-notes" rows="3" placeholder="Optional..."></textarea>
+
+            <button type="submit">Save Transaction</button>
+        </form>
+    </div>
+</body>
+</html>
